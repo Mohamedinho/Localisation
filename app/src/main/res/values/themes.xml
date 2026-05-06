@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Thème principal de l'application basé sur Material Components -->
+    <style name="Theme.Localisation" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Couleurs principales -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
 
-    <style name="Theme.Localisation" parent="android:Theme.Material.Light.NoActionBar" />
+        <!-- Couleurs secondaires -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+
+        <!-- Couleur de fond -->
+        <item name="android:windowBackground">@color/backgroundColor</item>
+
+        <!-- Statut bar -->
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+    </style>
 </resources>

@@ -1,23 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center_horizontal">
+    android:background="#ECEFF1">
+
+    <!-- En-tête stylisé avec votre nom personnalisé -->
+    <View
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#263238" />
 
     <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Aucune position détectée"
-        android:textSize="18sp"
-        android:layout_marginBottom="24dp" />
-
-    <Button
-        android:id="@+id/btnSend"
+        android:id="@+id/lblTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Envoyer au serveur" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="DOUASSI TRACER"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1" />
 
-</LinearLayout>
+    <!-- Carte contenant les informations -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Coordonnées actuelles"
+                android:textColor="#546E7A"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/displayCoordinates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Recherche de position..."
+                android:textColor="#212121"
+                android:textSize="18sp"
+                android:lineSpacingExtra="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#EEEEEE" />
+
+            <TextView
+                android:id="@+id/syncStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statut : Prêt pour synchronisation"
+                android:textColor="#78909C"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bouton d'action -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/cardInfo"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:text="SYNCHRONISER MAINTENANT"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        android:backgroundTint="#00C853"
+        app:elevation="4dp" />
+
+    <!-- Pied de page personnalisé -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Propulsé par DOUASSI GPS v2.0"
+        android:textColor="#90A4AE"
+        android:textSize="11sp" />
+
+</RelativeLayout>

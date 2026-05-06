@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Localisation</string>
+    <string name="app_name">DOUASSI Tracer</string>
     <string name="provider_enabled">Le fournisseur %s est activé</string>
     <string name="provider_disabled">Le fournisseur %s est désactivé</string>
     <string name="provider_new_status">Le fournisseur %1$s a un nouveau statut : %2$s</string>
